@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Details</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/account-details-style.css" th:href="@{../account-details-style.css}"/>
+</head>
+<body>
+<div th:switch="${user}">
+    <h2 th:case="null">Could not find account information!</h2>
+    <div th:case="*">
+        <h2 style="text-align: center">Account Information</h2>
+        <table class="center" th:if="${user}">
+            <tr style="margin-top: 40px">
+                <td style="vertical-align:center">
+                    <label>Username: </label>
+                </td>
+                <td th:text="${user.username.toUpperCase()}" style="text-align: right"></td>
+            </tr>
+            <tr  style="margin-top: 40px">
+                <td style="vertical-align:center">
+                    <label>First Name: </label>
+                </td>
+                <td th:text="${user.firstName.toUpperCase()}" style="text-align: right"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:center">
+                    <label>Surname: </label>
+                </td>
+                <td th:text="${user.surname.toUpperCase()}" style="text-align: right"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:center">
+                    <label>Mobile Number: </label>
+                </td>
+                <td th:text="${user.mobileNumber}" style="text-align: right"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:center">
+                    <label>Email Address: </label>
+                </td>
+                <td th:text="${user.emailAddress.toUpperCase()}" style="text-align: right"></td>
+            </tr>
+            <tr>
+                <td th:if="${currentUser}"><a th:href="@{/edit/{id}(id=${user.userId})}">Edit</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div th:switch="${bankingDetails}">
+    <h2 th:case="null">Could not find banking information!</h2>
+    <div th:case="*">
+        <h2  style="text-align: center">Banking Information</h2>
+        <table class="center" th:if="${bankingDetails}">
+            <tbody>
+            <tr>
+                <td style="vertical-align:center">
+                    <label>Bank Name: </label>
+                </td>
+                <td th:text="${bankingDetails.bank.toUpperCase()}" style="text-align: right"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:center">
+                    <label>Account Type: </label>
+                </td>
+                <td th:text="${bankingDetails.accountType.toUpperCase()}" style="text-align: right"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:center">
+                    <label>Account Number: </label>
+                </td>
+                <td th:text="${bankingDetails.accountNumber}" style="text-align: right"></td>
+            </tr>
+            <tr th:if="${currentUser}">
+                <td><a th:href="@{/edit/{id}(id=${bankingDetails.userId})}">Edit</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

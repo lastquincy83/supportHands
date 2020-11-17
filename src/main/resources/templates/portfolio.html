@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Armata|Exo|Oswald:300|Russo+One" rel="stylesheet">
+<link href="portfolio.css" rel="stylesheet">
+<script src="https://use.fontawesome.com/05749c40e4.js"></script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#282929" id="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+        </div>
+        <ul class="nav navbar-nav right" id="list" >
+            <li  id="home-button" ><a href="#">Home</a></li>
+            <li id="about-button"><a href='#top-well'>About</a></li>
+            <li id="portfolio-button"><a href='#middle-well'>Portfolio</a></li>
+            <li id="contact-button"><a href='#bottom-well'>Contact me</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!--<div class="responsive">-->
+<!--    <h1 class="text-center" id="header1" style="color:#f00 ">Damian Naidoo </h1>-->
+<!--</div>-->
+<!--<div class="responsive">-->
+<!--    <div class="well" id="top-well">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                <p style="color:white" id="p-about">Currently working for Old Mutual Finance, I am a Java developer learning some new skills.</p>-->
+<!--            </div>-->
+<!--            <div class="col-md-3">-->
+<!--                <img src="https://i.imgur.com/amUwGmf.jpg" class="img-center" id="prof-img"/>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<h1 style="margin-top: 18%">Log into Support Hands</h1>
+
+<form th:action="@{/login}" th:object="${loginForm}" method="post">
+    <table class="center">
+        <tr>
+            <td>
+                <label for="username">Username</label>
+            </td>
+            <td>
+                <input type="text" id="username" name="username" autofocus="autofocus"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Password</label>
+            </td>
+            <td>
+                <input type="password" id="password" name="password" autofocus="autofocus"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a type="button" href="/register">Register</a>
+            </td>
+            <td>
+                <button type="submit">Login</button>
+            </td>
+        </tr>
+    </table>
+    <table class="center" style="color: red">
+        <tr th:if="${InvalidCredentials}" style="vertical-align: center">
+            <td th:text="${InvalidCredentials}"></td>
+        </tr>
+    </table>
+</form>
+
+<div class="responsive">
+    <div class="well" id="middle-well">
+        <h2 class="text-center">Portfolio</h2>
+        <div class="row">
+<!--            <div class="col-md-6">-->
+<!--                <img src="https://i.imgur.com/8zfkdfg.jpg" alt="Warframe Tribute Page" class="img-responsive" id="warframe-trib"></img>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <img src="https://i.imgur.com/XEFnCX5.jpg" alt="Warframe Tribute Page" class="img-responsive" id="warframe-trib1"></img>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <img src="https://i.imgur.com/XEFnCX5.jpg" alt="Warframe Tribute Page" class="img-responsive" id="warframe-trib2"></img>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <img src="https://i.imgur.com/XEFnCX5.jpg" alt="Warframe Tribute Page" class="img-responsive" id="warframe-trib3"></img>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <img src="https://i.imgur.com/XEFnCX5.jpg" alt="Warframe Tribute Page" class="img-responsive" id="warframe-trib4"></img>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <img src="https://i.imgur.com/XEFnCX5.jpg" alt="Warframe Tribute Page" class="img-responsive" id="warframe-trib5"></img>-->
+<!--            </div>-->
+
+        </div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="well" id="bottom-well">
+        <div>
+            <h2 class="text-center">Contact Me</h2>
+        </div>
+        <form action="mailto:lastquincy83@gmail.com" method="post" enctype="text/plain">
+            <div class="row">
+                <div class="col-md-12" style="padding-bottom:5px">
+                    <input type="text" placeholder="Name" required>
+                </div><br>
+                <div class="col-md-12" style="padding-bottom:5px">
+                    <input type="text" placeholder="Email" required>
+                </div><br>
+                <div class="col-md-12" style="padding-bottom:5px">
+                    <input type="text" placeholder="Organisation">
+                </div><br>
+                <div class="col-md-12" style="padding-bottom:5px">
+
+                    <input type="text" placeholder="Message" size="50" style="height:50px" required>
+                </div><br>
+                <input type="submit" value="Send" id="sendbtn">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="well" id="end-well">
+        <h2 class="text-center">Social Media Pages</h2>
+
+        <div class="row">
+            <div class="col-md-2">
+                <a href="https://www.facebook.com/damian.t.naidoo"><button class="btn btn-default" href="" style ="color:blue"> <i class="fa fa-facebook-official"></i>acebook</button></a>
+            </div>
+            <div class="col-md-2">
+                <a href="https://www.freecodecamp.com/lastquincy83"><button href="" class="btn btn-default" style ="color:blue">FreeCodeCamp <i class="fa fa-free-code-camp" aria-hidden="true"></i></button></a>
+            </div>
+            <div class="col-md-1">
+                <a href="https://github.com/lastquincy83"><button href="#" class="btn btn-default" style ="color:blue">GitHub<i class="fa fa-github"></i></button></a>
+
+
+            </div>
+            <div class="col-md-1">
+                <a href="https://www.linkedin.com/in/damian-naidoo-2003b86b?trk=nav_responsive_tab_profile_pic"><button href="#" class="btn btn-default" style ="color:blue"> <i class="fa fa-linkedin"></i></button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 class="text-center" style="color:black">Created by Damian Naidoo</h4>
+</body>
+</html>

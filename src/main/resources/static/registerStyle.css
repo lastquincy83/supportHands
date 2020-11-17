@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    text-shadow: aquamarine;
+    font-size: 30px;
+    color: #ffb433;
+}
+
+body {
+    background-color: #900C3F;
+    color: #ffb433;
+}
+
+button {
+    margin-top: 40px;
+    margin-left: 48%;
+    background-color: white;
+    color: #255a8c;
+    font-weight: bold;
+}
+
+.center {
+    margin-left: 38%;
+    margin-right: auto;
+    width: 30%;
+}
+
+.rowMargin {
+    margin-top: 40px;
+}

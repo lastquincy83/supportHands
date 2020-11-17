@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{styles.css}">
+</head>
+<body>
+    <h1 style="margin-top: 18%">Log into Support Hands</h1>
+
+    <form th:action="@{/login}" th:object="${loginForm}" method="post">
+        <table class="center">
+            <tr>
+                <td>
+                    <label for="username">Username</label>
+                </td>
+                <td>
+                    <input type="text" id="username" name="username" autofocus="autofocus"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password</label>
+                </td>
+                <td>
+                    <input type="password" id="password" name="password" autofocus="autofocus"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a type="button" href="/register">Register</a>
+                </td>
+                <td>
+                    <button type="submit">Login</button>
+                </td>
+            </tr>
+        </table>
+        <table class="center" style="color: red">
+            <tr th:if="${InvalidCredentials}" style="vertical-align: center">
+                <td th:text="${InvalidCredentials}"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

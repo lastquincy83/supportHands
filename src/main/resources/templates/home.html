@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" media="all" href="auction-list-style.css" th:href="@{auction-list-style.css}"/>
+</head>
+<body>
+<h1>Welcome to Support Hands</h1>
+<div>
+    <h2 th:if="!auctions">Could not find auction information!</h2>
+    <h2 style="text-align: center; margin-top: 100px" >Active auctions</h2>
+    <table class="center">
+        <tr th:each="auction : ${auctions}" style="vertical-align: center">
+            <td style="vertical-align:center">
+                <label>Amount: </label>
+            </td>
+            <td th:text="${auction.amount}"></td>
+            <td>
+                <a th:href="@{/user/{id}(id=${auction.sellerId})/{currentUser}(currentUser=${#httpSession.getAttribute('currentUser')})}">Seller</a>
+            </td>
+            <td>
+                <button type="submit" th:href="@{/auction/{id}(id=${auction.auctionId})}">BID</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

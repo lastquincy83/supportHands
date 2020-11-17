@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Details</title>
+    <link rel="stylesheet" type="text/css" media="all" href="registerStyle.css"/>
+</head>
+<body>
+<h1 style="margin-top: 18%">Account Details</h1>
+<form>
+    <table class="center">
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="username">Username: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="text" id="username" name="username"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="firstName">First Name: </label>
+            </td>
+            <td>
+            </td>
+            <td style=" vertical-align:center;">
+                <input type="text" id="firstName" name="firstName"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="surname">Surname: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="text" id="surname" name="surname"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="emailAddress">Email Address: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="email" id="emailAddress" name="emailAddress"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="mobileNumber">Mobile Number: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="tel" id="mobileNumber" name="mobileNumber"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="bank">Bank Name: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="text" id="bank" name="bank"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label>Account Type: </label>
+            </td>
+            <td style="vertical-align:center">
+                <input type="radio" id="cheque" name="accountType" value="cheque"/>
+                <label for="cheque">Cheque</label>
+            </td>
+            <td style="vertical-align:center; horiz-align: right;">
+                <input type="radio" id="savings" name="accountType" value="savings"/>
+                <label for="savings">Savings</label>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="accountNumber">Account Number: </label>
+            </td>
+            <td>
+            </td>
+            <td style="" colspan="1">
+                <input type="number" id="accountNumber" name="accountNumber"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+<script th:href="/js/account-details.js"/>
+</html>

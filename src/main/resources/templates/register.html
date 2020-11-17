@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/static/registerStyle.css" th:href="@{/static/registerStyle.css}"/>
+</head>
+<body>
+<h1 style="margin-top: 8%">Register for Support Hands Auctions</h1>
+<form th:action="@{/register}" th:object="${registerForm}" method="post">
+    <table class="center" >
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="firstName">First Name: </label>
+            </td>
+            <td>
+            </td>
+            <td style=" vertical-align:center;">
+                <input type="text" id="firstName" name="firstName" autofocus="autofocus" />
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="surname">Surname: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="text" id="surname" name="surname" autofocus="autofocus"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="username">Username: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="text" id="username" name="username" autofocus="autofocus"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="password">Password: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="password" id="password" name="password" autofocus="autofocus"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="emailAddress"  >Email Address: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="email" id="emailAddress" name="emailAddress" autofocus="autofocus" />
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="mobileNumber">Mobile Number: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="tel" id="mobileNumber" name="mobileNumber" autofocus="autofocus" />
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="bank"  >Bank Name: </label>
+            </td>
+            <td colspan="1">
+            </td>
+            <td style="">
+                <input type="text" id="bank" name="bank" autofocus="autofocus"/>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label>Account Type: </label>
+            </td>
+            <td style="vertical-align:center">
+                <input type="radio" id="cheque" name="accountType" value="cheque"/>
+                <label for="cheque" >Cheque</label>
+            </td>
+            <td style="vertical-align:center; horiz-align: right;">
+                <input type="radio" id="savings" name="accountType" value="savings"/>
+                <label for="savings">Savings</label>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td style="vertical-align:center">
+                <label for="accountNumber"  >Account Number: </label>
+            </td>
+            <td>
+            </td>
+            <td style=""  colspan="1">
+                <input type="number" id="accountNumber" name="accountNumber" autofocus="autofocus"/>
+            </td>
+        </tr>
+    </table>
+    <table class="center" style="color: red">
+        <tr th:each="error : ${informationMissing}" style="vertical-align: center">
+            <td th:text="${error}"></td>
+        </tr>
+    </table>
+    <button type="submit">Register</button>
+</form>
+</body>
+</html>

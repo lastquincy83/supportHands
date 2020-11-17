@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+    text-shadow: aquamarine;
+    font-size: 30px;
+    color: white;
+}
+
+body {
+    margin-top: 12%;
+    background-color: #255a8c;
+    color: white;
+}
+
+button {
+    margin-top: 40px;
+    margin-left: 48%;
+    background-color: white;
+    color: #255a8c;
+    font-weight: bold;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    text-align: left;
+}
+
+tr {
+    height: 40px;
+}
+
+a {
+    color: aqua;
+}

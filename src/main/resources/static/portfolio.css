@@ -1,0 +1,124 @@
+body {
+    background-color:#000;
+    background-image: url(https://static.tumblr.com/vy2pzfk/46zls6lto/deserve_bg.jpg);
+    background-size:contain;
+}
+.well {
+    background-color:#5d615d;
+    background-image: url(http://www.aadhunikschool.in/wp-content/uploads/Grey-website-background-1024x575.jpg);
+    background-size:inherit;
+    border-width: 0px 4px 4px 4px;
+    border-style: solid;
+    border-color: red;
+    font-family: Exo;
+    padding: 40px 20px 40px 20px;
+}
+#navbar {
+    height:54px;
+    background-image: url(http://www.sawyoo.com/postpic/2013/07/free-web-page-background-designs_667375.jpg);
+    background-size:auto;
+
+}
+
+
+h1 {
+    font-family:Exo;
+    margin-top:100px;
+}
+
+a {
+    color:silver;
+    display: block;
+    padding: 8px;
+}
+
+ul {
+    padding:0;
+    margin:0;
+    float:right;
+}
+li {
+    float:right;
+}
+#contact-button {
+    position:absolute;
+    right: 0px;
+    width: 120px;
+    border: 1px solid #f00;
+    padding: 0px 0px 0px 0px;
+    margin:1px 0 0 0;
+}
+
+#portfolio-button {
+    position:absolute;
+    right: 120px;
+    width: 120px;
+    border: 1px solid #f00;
+    padding: 0px 0px 0px 0px;
+    margin:1px 0 0 0;
+}
+
+#about-button {
+    position:absolute;
+    right: 240px;
+    width: 120px;
+    border: 1px solid #f00;
+    padding: 0px 0px 0px 0px;
+    margin:1px 0 0 0;
+}
+
+#home-button {
+    position:absolute;
+    right: 360px;
+    width: 120px;
+    border: 1px solid #f00;
+    padding: 0px 0px 0px 0px;
+    margin:1px 0 0 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+#prof-img {
+    width:200px;
+    padding-top:60px;
+    border-style:solid;
+    border-width:3px;
+    border-color:#f00;
+    border-radius:25%;
+    margin:60px 35px 60px 35px;
+}
+
+#p-about {
+    padding: 70px 0px 20px 120px;
+    margin: 60px 35px 60px 35px;
+
+}
+
+#warframe-trib,#warframe-trib2, #warframe-trib3, #warframe-trib4, #warframe-trib5, #warframe-trib1 {
+    width:980px;
+    padding:0;
+    margin:20px 0px 20px 0px;
+    border-style:solid;
+    border-width:3px;
+    border-color:#f00;
+}
+
+h2 {
+    font-family:Armata;
+    border-style:solid;
+    border-width:0;
+    border-color:#f00;
+    border-bottom:medium solid #ff0000;
+    padding-bottom:10px;
+    color:red;
+}
+
+#sendbtn {
+    margin-left:30px;
+}
+
+#header1 {
+    margin:60px 0 10px 0;
+}
